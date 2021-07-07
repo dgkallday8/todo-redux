@@ -1,13 +1,122 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: lightcyan;
+  font-family: 'Arimo', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  background: rgba(245, 165, 100, .8);
+  width: 800px;
+  margin: 50px auto 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #666666;
+}
+
+.button {
+  margin-left: 5%;
+  font-size: 30px;
+  border-radius: 5px;
+  outline: none;
+  background: #fff;
+  &:hover {
+    background: darken(#fff, 10%);
+    cursor: pointer;
+  }
+}
+
+.header {
+
+
+  margin-bottom: 50px;
+
+  &__block {
+    display: flex;
+    padding: 0 5%;
+  }
+
+  &__title {
+    text-align: center;
+    padding: 5% 0;
+  }
+  &__input {
+    flex: 7;
+    margin: 0 auto;
+    display: flex;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+
+    &:focus {
+      box-shadow: 0 0 15px #ccc;
+    }
+  }
+
+  &__button {
+    flex: 1;
+
+  }
+}
+.list {
+  background: transparent;
+  padding: 0 5% 1%;
+
+
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3% 2%;
+    border-radius: 10px;
+    background: #bfbebe;
+    margin-bottom: 1em;
+    border: 2px solid #666;
+
+    &:hover {
+      background: lighten(#bfbebe, 15%);
+    }
+  }
+
+
+
+  &__checkbox {
+    transform: scale(2.5);
+    cursor: pointer;
+    margin-left: 2em;
+  }
+
+  &__text {
+    font-size: 1.4em;
+    flex: 6;
+    text-align: center ;
+
+  }
+
+  &__remove {
+    flex: 1;
+    i {
+      font-size: 22px;
+    }
+  }
+
+
+}
+.checked {
+  text-decoration: line-through;
+  color: #666;
 }
