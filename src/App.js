@@ -6,10 +6,7 @@ function App() {
   const dispatch = useDispatch()
   const tasks = useSelector(({tasks}) => tasks)
 
-  React.useEffect(() => {
-    localStorage.setItem('tasks', [...tasks].toString())
-    console.log(localStorage.tasks)
-  }, [tasks])
+  React.useEffect(() => {}, [tasks])
 
   const getInputValue = () => {
     const input = document.getElementById('input')
@@ -47,7 +44,6 @@ function App() {
     }
   }
 
-
   return (
     <div className="App">
 
@@ -60,7 +56,6 @@ function App() {
       </header>
 
       <ul id="list" className="list">
-
         {
           tasks.map((item, index) => {
             return (
@@ -72,19 +67,9 @@ function App() {
             )
           })
         }
-
       </ul>
     </div>
   )
 }
-
-/*
-<li className="list__item">
-  <input onChange={checkHandler} type="checkbox" className="list__checkbox"/>
-  <p className="list__text">Что</p>
-  <button className="list__remove button"><i className="fas fa-trash" /></button>
-</li>
-*/
-
 
 export default App

@@ -1,16 +1,10 @@
 import {ADD_ITEM, REMOVE_ITEM} from './types'
 
 const initialState = {
-
-  // tasks: Object.keys(localStorage)
-  tasks: [
-    'Купить молоко',
-    'Испечь булку'
-  ]
+  tasks: []
 }
 
 export const rootReducer = (state = initialState, action) => {
-  console.log('localStorage', localStorage.tasks)
   switch (action.type) {
     case ADD_ITEM: {
       return {
