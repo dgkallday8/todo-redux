@@ -1,3 +1,3 @@
-Тренировочное приложение Todo в связке React-Redux.
+РўСЂРµРЅРёСЂРѕРІРѕС‡РЅРѕРµ РїСЂРёР»РѕР¶РµРЅРёРµ Todo РІ СЃРІСЏР·РєРµ React-Redux.
 
 https://todo-redux-training.vercel.app/
